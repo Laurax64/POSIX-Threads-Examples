@@ -15,6 +15,5 @@ int main (int argc, char *argv[])
 	  printf ("t: %ld\n", t);
 	  pthread_create (&threads[t], NULL, PrintThreadId, (void *) t);
 	  pthread_join(threads[t], NULL);
-	  
 	}
 }
