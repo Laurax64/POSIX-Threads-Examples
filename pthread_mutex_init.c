@@ -19,7 +19,6 @@ int main (int argc, char *argv[])
   pthread_t threads[5];
   for (long t = 0; t < 5; t++)
 	{
-
 	  // Lock the mutex before printing
 	  pthread_mutex_lock (&print_mutex);
 	  printf ("t: %ld\n", t);
