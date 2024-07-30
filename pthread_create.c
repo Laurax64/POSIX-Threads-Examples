@@ -1,9 +1,9 @@
 #include <pthread.h>
 #include <stdio.h>
 
-void *PrintThreadId (void *threadid)
+void *PrintThreadId (void *threadId)
 {
-  long tid = (long) threadid;
+  long tid = (long) threadId;
   printf ("tid: %ld\n", tid);
 }
 
