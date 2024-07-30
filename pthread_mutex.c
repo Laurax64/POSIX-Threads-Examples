@@ -6,10 +6,13 @@ int shared_data = 0;
 pthread_mutex_t my_mutex;
 
 void* thread_func(void* arg) {
-    pthread_mutex_lock(&my_mutex);  // Lock the mutex
-    shared_data++;                  // Critical section
+    // Lock the mutex
+    pthread_mutex_lock(&my_mutex);  
+    // Critical section
+    shared_data++;                  
     printf("Thread %ld incremented shared_data to %d\n", (long)arg, shared_data);
-    pthread_mutex_unlock(&my_mutex); // Unlock the mutex
+    // Unlock the mutex
+    pthread_mutex_unlock(&my_mutex); 
     return NULL;
 }
 
